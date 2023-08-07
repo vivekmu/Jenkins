@@ -1,0 +1,59 @@
+Started by user Vivek
+[Pipeline] Start of Pipeline
+[Pipeline] podTemplate
+[Pipeline] {
+[Pipeline] node
+Created Pod: kubernetes jenkins/tt-6-g9xn0-ml2c7-63dqz
+jenkins/tt-6-g9xn0-ml2c7-63dqz Container jnlp was terminated (Exit Code: 255, Reason: Error)
+[Pipeline] // node
+[Pipeline] }
+
+- jnlp -- terminated (255)
+-----Logs-------------
+Aug 07, 2023 6:01:04 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 3131.vf2b_b_798b_ce99
+Aug 07, 2023 6:01:04 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using /home/jenkins/agent/remoting as a remoting work directory
+Aug 07, 2023 6:01:04 PM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
+INFO: Both error and output logs will be printed to /home/jenkins/agent/remoting
+Aug 07, 2023 6:01:04 PM hudson.remoting.jnlp.Main$CuiListener error
+SEVERE: Connection failed.
+io.jenkins.remoting.shaded.jakarta.websocket.DeploymentException: Connection failed.
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.container.jdk.client.JdkClientContainer$1.call(JdkClientContainer.java:187)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.container.jdk.client.JdkClientContainer$1.call(JdkClientContainer.java:107)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.container.jdk.client.JdkClientContainer.openClientSocket(JdkClientContainer.java:192)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager$3$1.run(ClientManager.java:647)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager$3.run(ClientManager.java:696)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager$SameThreadExecutorService.execute(ClientManager.java:849)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager.connectToServer(ClientManager.java:493)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager.connectToServer(ClientManager.java:337)
+	at hudson.remoting.Engine.runWebSocket(Engine.java:683)
+	at hudson.remoting.Engine.run(Engine.java:499)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.UnixAsynchronousSocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.UnixAsynchronousSocketChannelImpl.finishConnect(Unknown Source)
+	at java.base/sun.nio.ch.UnixAsynchronousSocketChannelImpl.finish(Unknown Source)
+	at java.base/sun.nio.ch.UnixAsynchronousSocketChannelImpl.onEvent(Unknown Source)
+	at java.base/sun.nio.ch.EPollPort$EventHandlerTask.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+
+
+- shell -- running
+-----Logs-------------
+
+[Pipeline] // podTemplate
+[Pipeline] End of Pipeline
+Queue task was cancelled
+org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: fcaff80f-6fd1-48c4-a0e2-be89e6fea292
+Finished: ABORTED
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
